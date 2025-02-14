@@ -13,7 +13,7 @@ export const useSocket = () => {
 
 export const SocketProvider = ({ children }) => {
   const socket = useMemo(
-    () => io("http://localhost:3000"), []
+    () => io("https://webrtc-va4e.onrender.com"), []
     
     );
 
