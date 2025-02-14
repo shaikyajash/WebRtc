@@ -72,10 +72,13 @@ const RoomPage = () => {
 
   useEffect(() => {
     peer.peer.addEventListener("track", async (ev) => {
-      const remoteStream = ev.streams;
+      const remoteStream = new MediaStream();
+      ev.streams[0].getTracks().forEach(track => {
+        remoteStream.addTrack(track);
+      });
       console.log("Got Tracks");
 
-      setRemoteStream(remoteStream[0]);
+      setRemoteStream(remoteStream);
     });
   }, []);
 
