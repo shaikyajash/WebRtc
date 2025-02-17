@@ -1,18 +1,19 @@
 import React from 'react'
-import LobbyScreen from './screens/Lobby'
 import { Routes, Route } from 'react-router-dom'
-import RoomPage from './screens/Room'
+import Lobby from './screens/Lobby';
+import Room from './screens/Room';
+
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LobbyScreen />} />
-        <Route path="/room/:roomId" element={<RoomPage/>} />
-        
-      </Routes>
-    </div>
+    //Routes will go here
+    <Routes>
+      <Route path="/" element={<Lobby/>} />
+      <Route path="/room/:roomId" element={<Room />} />
+
+
+    </Routes>
   )
 }
 
-export default App
+export default App;
