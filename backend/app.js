@@ -6,9 +6,13 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://web-rtc-cyan-theta.vercel.app",
+    origin: ["https://web-rtc-cyan-theta.vercel.app"],
     methods: ["GET", "POST"],
   },
+});
+
+app.get("/", (req, res) => {  
+  res.send("Server is running");
 });
 
 io.on("connection", (socket) => {
