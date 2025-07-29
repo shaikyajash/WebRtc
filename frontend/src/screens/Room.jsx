@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import io from "socket.io-client";
 import "./Room.css";
 
-const SOCKET_SERVER_URL = "https://webrtc-va4e.onrender.com";
+const SOCKET_SERVER_URL = "https://webrtc-on10.onrender.com";
 const ICE_SERVERS = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
